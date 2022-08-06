@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net"
 
@@ -13,11 +14,14 @@ func main() {
 		log.Fatalln(err)
 	}
 
+	fmt.Printf("listening on: 20080 ...\n")
+
 	for {
 		conn, err := listener.Accept()
 		if err != nil {
 			log.Fatalln(err)
 		}
+
 		go handler.Handle(conn)
 	}
 }
