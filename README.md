@@ -25,11 +25,11 @@ go io.Copy(conn, rp)
 
 ### How to run?
 Server:
-```go 
+```
 go run main.go
 ```
 
 Client:
-```go 
+``` 
 go run client/client.go
 ```
